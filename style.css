@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+/* Paleta de colores de Nave */
+:root {
+    --color-primary-600: #2b2b2b;
+    --color-primary-500: #000000;
+    --color-primary-400: #360c72;
+    --color-primary-300: #652bdf;
+    --color-primary-200: #e4d7ff;
+    --color-primary-100: #ffffff;
+
+}
+
+/* ESTILO BASE DEL DOCUMENTO */
+
+body {
+    background-color: var(--color-primary-100);
+    overflow-y: auto;
+
+}
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+ul,
+li {
+
+    list-style: none;
+}
+
+
+/* CONTENEDOR CENTRAL LIMITA EL ANCHO DEL HEADER */
+.content-container {
+    max-width: 1500px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px
+}
+
+/* HEADER (ENCABEZADO) ESTILOS */
+.header {
+    background-color: var(--color-primary-100);
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    z-index: auto;
+}
+
+.logo-container {
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: none;
+    height: 40px;
+    width: 40px;
+}
+
+.logo-mobile {
+    height: 32px;
+    display: none;
+}
+
+/* Lista de enlaces de navegación principal */
+.nav-list {
+    display: flex;
+    border-radius: 100px;
+    gap: 20px;
+    font-size: 13px;
+
+}
+
+.nav-list a {
+    text-decoration: none;
+}
+
+/* Línea vertical para separar la navegación de los botones */
+.separator-line {
+    width: 0;
+    height: 24px;
+    border-left: 1px solid rgb(190, 185, 185);
+}
+
+
+/* Elemento individual de la navegación */
+.nav-item {
+    color: var(--color-primary-500);
+    border-radius: 9999px;
+    padding: 10px 20px;
+    font-weight: 750;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    cursor: pointer;
+
+}
+
+.nav-item:hover {
+    background-color: var(--color-primary-200);
+    color: var(--color-primary-400);
+
+}
+
+/* Contenedor de los botones de acción (Espacio Nave y Entrar a Nave) */
+.button-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    padding-left: 24px;
+    font-size: 14px;
+
+}
+
+
+.btn-primary {
+    color: var(--color-primary-300);
+    background-color: var(--color-primary-100);
+    padding: 9px 24px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+
+    border: 1px solid var(--color-primary-300);
+    cursor: pointer;
+    appearance: none;
+
+}
+
+.btn-primary:hover {
+    color: var(--color-primary-400);
+    background-color: var(--color-primary-200);
+    transition-duration: 700ms;
+
+}
+
+.btn-secundary {
+    color: var(--color-primary-100);
+    background-color: var(--color-primary-300);
+    padding: 9px 24px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+
+    border: 1px solid var(--color-primary-300);
+    cursor: pointer;
+    appearance: none;
+
+}
+
+.btn-secundary:hover {
+    background-color: var(--color-primary-200);
+    color: var(--color-primary-400);
+    transition-duration: 700ms;
+
+
+}
+
+/* Reseteo general para todos los botones */
+button {
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+/* SECCIÓN BANNER PRINCIPAL */
+.banner-nave {
+    position: relative;
+    width: 980px;
+    height: 360px;
+    margin: 30px auto;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.banner-nave img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Texto superpuesto en el banner */
+.banner-text {
+    position: absolute;
+    bottom: 56px;
+    left: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 420px;
+    color: #fff;
+}
+
+.banner-text h3 {
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.banner-text p {
+    color: var(--color-primary-600);
+    font-size: 18px;
+    font-weight: 400;
+    width: 400px;
+    margin: 0;
+    text-align: left;
+}
+
+/* Botón de texto dentro del banner (Ej. "Soy Galicia...") */
+.btn-text {
+    align-self: flex-start;
+    color: var(--color-primary-100);
+    background-color: var(--color-primary-300);
+    padding: 12px 30px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0;
+}
+
+.btn-text:hover {
+    background-color: var(--color-primary-400);
+    transition-duration: 700ms;
+}
+
+/* NAVEGACIÓN DEL CARRUSEL */
+.carousel-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin-bottom: 0;
+
+
+}
+
+/* Estilos iniciales de las flechas (Botones) */
+.arrow {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 100;
+    cursor: pointer;
+    color: var(--color-primary-500);
+    padding: 0px 30px;
+}
+
+.arrow:hover {
+    color: var(--color-primary-500);
+}
+
+/* Contenedor de los puntos de navegación */
+.dots-container {
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilo base del punto (Inactivo - Gris) */
+.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Estilo del punto activo (Púrpura con doble borde/sombra) */
+.dot.active {
+    width: 14px;
+    height: 14px;
+    background-color: var(--color-primary-300);
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--color-primary-600);
+    border: none;
+}
+
+/* SECCIÓN PRINCIPAL */
+.section-container {
+    max-width: 1500px;
+    height: 200px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+/* Título principal de la sección */
+.main-title {
+    max-width: 980px;
+    margin: 96px auto 0;
+    font-size: 37px;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+    color: var(--color-primary-600);
+    text-align: center;
+}
+
+/* Contenedor de las tarjetas */
+.cards-box {
+    color: var(--color-primary-600);
+    width: 765px;
+    margin: 40px auto 0;
+    margin-top: 40px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    gap: 40px
+}
+
+/* Estilo de la tarjeta individual */
+.card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    transition:
+        transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card h3 {
+    font-size: 20px;
+}
+
+.card p {
+    color: rgb(123, 122, 122);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Contenedor del ícono de la tarjeta */
+.card-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+    width: 50px;
+    height: 50px;
+    background: #f0eafc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Estilo del ícono de Bootstrap dentro de la tarjeta */
+.card .card-icon i.bi {
+    color: var(--color-primary-300);
+    font-size: 24px;
+    display: block;
+}
+
+.card .card-icon i.bi:hover {
+    color: var(--color-primary-400);
+}
+
+/* Estilo general del párrafo */
+p {
+    width: 250px;
+    margin: 20px auto 0;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    gap: 20px
+}
+
+/* SECCIÓN 'HISTORIAS QUE VUELAN' (PILL STORIES) */
+
+/* Contenedor de la de píldora grande) */
+.pill-stories {
+    background-color: var(--color-primary-400);
+    color: var(--color-primary-100);
+    border-radius: 24px;
+    width: 980px;
+    height: 120px;
+    margin: 64px auto;
+    padding: 28px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.pill-stories {
+    width: 980px;
+    padding: 24px 40px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+/* Contenedor del texto dentro de la píldora */
+.pill-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    flex: 1;
+    gap: 12px;
+
+
+}
+
+.pill-text h3 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.pill-text p {
+
+    margin: 0;
+    width: auto;
+    display: block;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+/* Botón de acción dentro de la píldora (Ej. "Conocer más") */
+.btn-pill {
+    color: var(--color-primary-300);
+    background-color: var(--color-primary-100);
+    padding: 12px 28px;
+    border-radius: 999px;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.btn-pill:hover {
+    color: var(--color-primary-100);
+    background-color: var(--color-primary-500);
+    transition-duration: 700ms;
+}
