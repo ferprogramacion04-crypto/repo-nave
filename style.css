@@ -31,7 +31,7 @@ body {
 html,
 body {
     min-height: 100%;
-    overflow-x: hidden;
+    
 }
 
 
@@ -55,13 +55,18 @@ li {
 
 /* HEADER (ENCABEZADO) ESTILOS */
 .header {
+    position: sticky;
+    top: 0;
     background-color: var(--color-primary-100);
     display: flex;
     justify-content: center;
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
-    z-index: auto;
+    z-index: 1000;
+    
+    
 }
+
 
 .logo-container {
     cursor: pointer;
@@ -69,13 +74,21 @@ li {
 
 .menu-icon {
     display: none;
-    height: 40px;
+    position: absolute;
+    left: 24px;
     width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-mobile {
-    height: 32px;
+
     display: none;
+    width: auto;
+    max-width: 150px;
+    max-height: 40px;
+    height: 100%;
 }
 
 /* Lista de enlaces de navegación principal */
@@ -299,7 +312,7 @@ button {
 /* SECCIÓN PRINCIPAL */
 .section-container {
     max-width: 1500px;
-    height: 200px;
+    height: auto;
     margin: 0 auto;
     text-align: center;
 
@@ -344,7 +357,11 @@ button {
 }
 
 .card p {
-    color: rgb(123, 122, 122);
+    color: grey;
+    width: 250px;
+    margin: 10px auto 0;
+    font-size: 16px;
+    line-height: 25px;
 }
 
 .card:hover {
@@ -380,7 +397,8 @@ button {
 
 /* Estilo general del párrafo */
 p {
-    width: 250px;
+
+    width: auto;
     margin: 20px auto 0;
     text-align: left;
     display: flex;
@@ -439,7 +457,7 @@ p {
     text-align: left;
 }
 
-/* Botón de acción dentro de la píldora (Ej. "Conocer más") */
+/* Botón de acción dentro de la píldora */
 .btn-pill {
     color: var(--color-primary-300);
     background-color: var(--color-primary-100);
@@ -457,3 +475,307 @@ p {
     background-color: var(--color-primary-500);
     transition-duration: 700ms;
 }
+
+.section-metodo {
+    max-width: 980px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.main-title {
+    max-width: 980px;
+    margin: 96px auto 0;
+    margin-top: 22px;
+    font-size: 37px;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+    color: var(--color-primary-600);
+    text-align: center;
+}
+
+.section-metodo p {
+    color: grey;
+    font-size: 15px;
+
+
+}
+
+.metodos-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.metodo-card {
+    background: var(--color-primary-100);
+    border-radius: 32px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    gap: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+
+.metodo-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.metodo-info p {
+    color: #444;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.metodo-img {
+    display: flex;
+    justify-content: center;
+}
+
+.metodo-img img {
+    max-height: 300px;
+    width: auto;
+    transition: transform 0.4s ease;
+}
+
+
+.metodo-card:hover .metodo-img img {
+    transform: scale(1.05);
+}
+
+.metodo-card.reverse-layout {
+    flex-direction: row-reverse;
+}
+
+.btn-metodo {
+    color: var(--color-primary-100);
+    background-color: var(--color-primary-300);
+    padding: 14px 26px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer {
+    background-color: var(--color-primary-100);
+    padding: 60px 20px;
+    border-top: 1px solid #e7eaed;
+}
+
+.footer-container {
+    max-width: 1022px;
+    margin: auto;
+}
+
+.footer-lists {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+
+
+}
+
+.footer-list h4 {
+
+    font-size: 15px;
+    font-weight: 700px;
+    margin-bottom: 16px;
+    color: var(--color-primary-500);
+}
+
+.footer-list ul li {
+    margin-bottom: 10px;
+}
+
+.footer-list a {
+    font-size: 14px;
+    color: rgb(83, 81, 81);
+    transition: color .2s ease;
+    text-decoration: none;
+
+}
+
+.footer-list a:hover {
+    color: var(--color-primary-300);
+    text-decoration: underline;
+}
+
+
+@media (max-width: 980px) {
+
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .logo-mobile {
+        display: flex;
+        
+
+    }
+
+    .logo-container {
+        display: none;
+
+    }
+
+
+    .nav-list,
+    .separator-line {
+        display: none;
+
+    }
+
+    .banner-text {
+        display: none;
+    }
+
+    .button-actions {
+        display: none;
+    }
+}
+
+@media (max-width: 790px) {
+
+    .banner-nave {
+        width: auto;
+        height: auto;
+        margin-left: 16px;
+        margin-right: 16px;
+        
+    }
+
+
+    .banner-text h3 {
+        font-size: 28px;
+    }
+
+    .banner-text p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+
+    .main-title {
+        font-size: 24px;
+        margin-top: 40px;
+        padding: 0 24px;
+        text-align: left;
+
+    }
+
+
+    .cards-box {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 24px;
+        gap: 16px;
+    }
+
+    .card {
+        width: 100%;
+        text-align: left;
+    }
+
+    .card p {
+        text-align: left;
+        margin: 10px 0;
+    }
+
+
+    .pill-stories {
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        margin-left: 16px;
+        margin-right: 16px;
+        padding: 32px 24px;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .pill-text h3 {
+        font-size: 20px;
+    }
+
+    .btn-pill {
+        width: 100%;
+        text-align: center;
+    }
+
+    .metodo-card, 
+    .metodo-card.reverse-layout {
+        display: grid ; 
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+            "imagen"
+            "texto"; 
+        gap: 24px;
+        padding: 32px 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .metodo-img {
+        grid-area: imagen; 
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .metodo-info {
+        grid-area: texto; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+    .metodo-img img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .section-metodo p {
+        text-align: center;
+    }
+
+    .footer-lists {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px 24px;
+        justify-items: start;
+
+    }
+
+    .footer-lists ul {
+    padding: 0;
+}
+
+.footer-container {
+    min-width: 300px;
+}
+
+.footer-logo {
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+}
+
+
+
+}
+
