@@ -70,6 +70,8 @@ li {
 
 .logo-container {
     cursor: pointer;
+    
+    
 }
 
 .menu-icon {
@@ -89,6 +91,7 @@ li {
     max-width: 150px;
     max-height: 40px;
     height: 100%;
+    
 }
 
 /* Lista de enlaces de navegación principal */
@@ -382,6 +385,7 @@ button {
     background: #f0eafc;
     border-radius: 8px;
     box-sizing: border-box;
+    
 }
 
 /* Estilo del ícono de Bootstrap dentro de la tarjeta */
@@ -565,6 +569,13 @@ p {
     text-decoration: none;
 }
 
+.btn-metodo:hover{
+
+    background-color: var(--color-primary-400);
+    transition-duration: 700ms;
+
+}
+
 .footer {
     background-color: var(--color-primary-100);
     padding: 60px 20px;
@@ -574,6 +585,10 @@ p {
 .footer-container {
     max-width: 1022px;
     margin: auto;
+}
+
+.footer-logo{
+    margin: 8px;
 }
 
 .footer-lists {
@@ -599,7 +614,7 @@ p {
 
 .footer-list a {
     font-size: 14px;
-    color: rgb(83, 81, 81);
+    color: var(--color-primary-600);
     transition: color .2s ease;
     text-decoration: none;
 
@@ -633,6 +648,7 @@ p {
     .nav-list,
     .separator-line {
         display: none;
+        
 
     }
 
@@ -680,6 +696,8 @@ p {
         width: 100%;
         padding: 0 24px;
         gap: 16px;
+        grid-template-columns: 1fr 1fr;
+        
     }
 
     .card {
@@ -772,7 +790,8 @@ p {
     display: flex;
     position: relative;
     justify-content: center;
-
+    height: 40px;
+    margin: 20px;
 }
 
 
